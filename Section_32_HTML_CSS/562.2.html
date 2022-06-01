@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- * = All -->
+    <!-- Its possible hierarchize type of style in CSS -->
+    <!--    padding-top: 20px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            ==
+            padding: 20px 0 15px 15px; Clockwise
+            
+            padding: 15px (up down) 100px (left right)
+    -->
+    <style>
+        * { 
+            
+        }
+
+        body {
+            background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/a56d01a1-6d34-48f8-ab3f-f35f98186d69/BR-pt-20220502-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+            background-size: cover;
+            background-position: top center;
+        }
+
+        #heading {
+        }
+
+        #heading div {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        #heading .h1{
+            padding: 15px 0;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        #heading a {
+            color: #e50914;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header id="heading">
+        <div>
+            <h1 class="h1">
+                <a href="#">Netflix</a>
+            </h1>
+
+            <h2 class="h1">
+                <a href="#">Netflix</a>
+            </h2>
+        </div>
+    </header>
+</body>
+</html>
