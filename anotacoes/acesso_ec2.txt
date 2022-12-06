@@ -1,0 +1,1 @@
+ssh -i ~/.ssh/ssh-aws/curso_js_miranda.pem ec2-user@52.90.87.195 //Verificar o DNS sempre que interromper

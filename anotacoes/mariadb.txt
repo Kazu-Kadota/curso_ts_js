@@ -1,2 +1,2 @@
 nome: bdmariadb1
-senha: 328rOqj&OLq@
+senha: 328rOqjsOLq@
