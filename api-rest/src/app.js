@@ -1,6 +1,8 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import { resolve } from 'path'
+import cors from 'cors'
+import helmet from 'helmet'
 
 import home from './routes/home'
 import user from './routes/user'
@@ -12,6 +14,21 @@ import './database'
 
 dotenv.config()
 
+const whitelist = [
+  'https://kazukadota.com.br',
+  'http://localhost:3000'
+]
+
+const corsOptions = {
+  origin: function(origin, callback) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
 export class App {
   constructor(port) {
     this.app = express()
@@ -21,9 +38,11 @@ export class App {
   }
 
   middlewares() {
+    this.app.use(cors(corsOptions))
+    this.app.use(helmet())
     this.app.use(express.urlencoded({ extended: true }))
     this.app.use(express.json())
-    this.app.use(express.static(resolve(__dirname, 'uploads')))
+    this.app.use('/images/', express.static(resolve(__dirname, '..', 'uploads', 'images')))
   }
 
   routes() {
