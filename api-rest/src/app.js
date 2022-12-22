@@ -15,10 +15,8 @@ import './database'
 dotenv.config()
 
 const whitelist = [
-  'https://api.kazukadota.com.br',
   'https://kazukadota.com.br',
-  'http://localhost:3000',
-  'http://localhost:3001'
+  'https://www.kazukadota.com.br'
 ]
 
 const corsOptions = {

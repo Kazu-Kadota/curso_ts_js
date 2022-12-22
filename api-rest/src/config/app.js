@@ -1,3 +1,3 @@
 export default {
-  url: 'https://kazukadota.com.br'
+  url: 'https://api.kazukadota.com.br'
 }

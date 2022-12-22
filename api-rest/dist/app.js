@@ -16,7 +16,7 @@ _dotenv2.default.config()
 
 const whitelist = [
   'https://kazukadota.com.br',
-  'http://localhost:3000'
+  'https://www.kazukadota.com.br'
 ]
 
 const corsOptions = {
